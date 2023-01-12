@@ -1,0 +1,88 @@
+.formInput {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+.show {
+  display: block;
+  transition: 800ms;
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  margin-top: 25%;
+}
+
+.show.active {
+  transform: translateY(100px) scale(0) rotateY(180deg);
+  opacity: 0;
+}
+
+input {
+  padding: 15px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+label {
+  font-size: 12px;
+  color: gray;
+}
+
+span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+.sign-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  background-position: center;
+}
+
+form {
+  background-color: white;
+  padding: 0px 60px;
+  border-radius: 10px;
+  margin-top: -20vw;
+  padding-bottom: 2vh;
+}
+
+@media only screen and (min-width: 1025px) {
+  form {
+    background-color: white;
+    padding: 0px 60px;
+    border-radius: 10px;
+    margin-top: -15vw;
+    padding-bottom: 2vh;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  form {
+    background-color: white;
+    padding: 0px 60px;
+    border-radius: 10px;
+    margin-top: -5vw;
+    padding-bottom: 2vh;
+  }
+}
